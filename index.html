@@ -19,7 +19,7 @@
             <!-- https://script.google.com/macros/s/AKfycbxWqEEmdiv5XnLEtsSo_xcRKppKk-O_r38UDpK_2YJgRwDRcEdUobitmraK1aCmq1Mj/exec -->
             <form method="get">
                 <input type="email" name="email" placeholder="Your Email" required>
-                <button type="submit" class="submit">Submit</button>
+                <button id="submit" type="submit" class="submit">Submit</button>
             </form>
         </div>
 
@@ -32,7 +32,7 @@
                 };
         
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxWqEEmdiv5XnLEtsSo_xcRKppKk-O_r38UDpK_2YJgRwDRcEdUobitmraK1aCmq1Mj/exec', true); // Replace with your Apps Script URL
+                xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzYED2JixSpiOAOQdpScvFitA55XXU_HEZtGNsRpUo-0SdXTaRshs-VhXIMOYrugKx3/exec', true); // Replace with your Apps Script URL
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 xhr.onload = function() {
                     if (xhr.status == 200) {
