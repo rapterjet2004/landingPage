@@ -14,13 +14,37 @@
     
     <div class="before-content-line">
         
-        <div class="form-container">
+        <div id="contactForm" class="form-container">
             <h2>Interested? Join early access! </h2>
-            <form action="https://docs.google.com/spreadsheets/d/your-sheet-id/edit#gid=0" method="get">
+            <!-- https://script.google.com/macros/s/AKfycbxWqEEmdiv5XnLEtsSo_xcRKppKk-O_r38UDpK_2YJgRwDRcEdUobitmraK1aCmq1Mj/exec -->
+            <form method="get">
                 <input type="email" name="email" placeholder="Your Email" required>
                 <button type="submit" class="submit">Submit</button>
             </form>
         </div>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+                var formData = {
+                    email: document.getElementById('email').value,
+                };
+        
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxWqEEmdiv5XnLEtsSo_xcRKppKk-O_r38UDpK_2YJgRwDRcEdUobitmraK1aCmq1Mj/exec', true); // Replace with your Apps Script URL
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        alert("Form submitted successfully!");
+                    } else {
+                        alert("Error submitting form.");
+                    }
+                };
+                xhr.send(JSON.stringify(formData));
+            });
+        </script>
+
         <img src="img-home-1.png" alt="header" class="one"/>
     </div>
     
