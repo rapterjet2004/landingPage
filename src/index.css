@@ -1,0 +1,167 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#FCE5CD, #FFF2CC, #D9EAD3, #C9DAF8);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+img.one {
+    height: auto;
+    width: 55%;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+img.logo {
+    height: 15%;
+    width: 15%;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+header {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    display: flex;
+    align-items: start; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    width: 80%; /* Take full width of the parent */
+    height: auto; /* Take full viewport height for centering vertically */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+footer {
+    text-align: center;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    width: 80%; /* Take full width of the parent */
+    height: auto; /* Take full viewport height for centering vertically */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    padding: 16px;
+}
+
+.before-content-line {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    width: 90%; /* Take full width of the parent */
+    height: auto; /* Take full viewport height for centering vertically */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    width: 50%; /* Take full width of the parent */
+    height: auto; /* Take full viewport height for centering vertically */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container h1 {
+    margin-left: 25%;
+    margin-right: auto;
+    display: block;
+}
+  
+.container img {
+    margin-left: 5%; /* Space between image and heading */
+    height: auto; /* adjust as needed */
+    width: 45%;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(50px);
+    border-radius: 25px;
+    padding: 30px;
+    width: 50%;
+    text-align: center;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+
+}
+.form-container h2 {
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+button.submit {
+    background: linear-gradient(45deg, #D9EAD3, #C9DAF8);
+    color: green;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    img.logo {
+        width: 35%;
+        display: flex;
+        align-items: center; /* Vertical alignment */
+        justify-self: center;
+    }
+
+    .before-content-line {
+        display: flex; /* Ensure the header is still displayed */
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center-align items vertically */
+        width: 100%;
+    }
+
+    .container img {
+        width: 100%;
+    }
+
+
+    img.one {
+        width: 0%;
+    }
+}
