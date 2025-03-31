@@ -10,10 +10,11 @@ body {
 
 img.one {
     height: auto;
-    width: 55%;
+    width: 85%;
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 25px;
     display: block;
 
 }
@@ -73,22 +74,22 @@ footer {
     display: flex;
     align-items: center; /* Vertical alignment */
     justify-content: center; /* Horizontal alignment */
-    width: 50%; /* Take full width of the parent */
+    width: 100%; /* Take full width of the parent */
     height: auto; /* Take full viewport height for centering vertically */
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 45px;
 }
 
 .container h1 {
-    margin-left: 25%;
+    margin-left: 5%;
     margin-right: auto;
     display: block;
 }
   
 .container img {
-    margin-left: 5%; /* Space between image and heading */
+    /* margin-left: 5%; Space between image and heading */
     height: auto; /* adjust as needed */
-    width: 45%;
+    width:65%;
+    margin-right: 5%;
 }
 
 .form-container {
@@ -157,11 +158,11 @@ button.submit {
     }
 
     .container img {
-        width: 100%;
+        width: 50%;
     }
 
 
     img.one {
-        width: 0%;
+        width: 80%;
     }
 }

@@ -9,49 +9,68 @@
 <body>
     <header>
         <img src="logo.png" class="logo"/>
-        <h1> AI essay grading & analytics for Homeschoolers</h1>
+        <h1> AI grading, Managment, Analytics for Homeschoolers</h1>
     </header>
     
+
+    <img src="img-home-2.png" alt="header" class="one"/>
     <div class="before-content-line">
         
         <div id="contactForm" class="form-container">
-            <h2>Interested? Join early access! </h2>
-            <!-- https://script.google.com/macros/s/AKfycbxWqEEmdiv5XnLEtsSo_xcRKppKk-O_r38UDpK_2YJgRwDRcEdUobitmraK1aCmq1Mj/exec -->
-            <form method="get">
-                <input type="email" name="email" placeholder="Your Email" required>
-                <button id="submit" type="submit" class="submit">Submit</button>
+            <progress id="progress" style="display: none; align-content: center;"></progress>
+            <h2>Would this mockup help you? Join wait list! </h2>
+            <!-- https://script.google.com/macros/s/AKfycbyolTnjieCUouNNFynelsX5R-O8RTLw0LzEql372gtdKERIlZoCXNb10-6BEKRFQ8BN/exec -->
+            <form method="POST">
+                <input id="Email" type="email" placeholder="Your Email" required>
+                <button type="submit" class="submit">Submit</button>
             </form>
         </div>
 
         <script>
             document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault();
+                event.preventDefault(); // Prevent the form from submitting the normal way
         
-                var formData = {
-                    email: document.getElementById('email').value,
-                };
+                const email = document.getElementById('Email').value;
         
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzYED2JixSpiOAOQdpScvFitA55XXU_HEZtGNsRpUo-0SdXTaRshs-VhXIMOYrugKx3/exec', true); // Replace with your Apps Script URL
-                xhr.setRequestHeader('Content-Type', 'application/json');
-                xhr.onload = function() {
-                    if (xhr.status == 200) {
-                        alert("Form submitted successfully!");
-                    } else {
-                        alert("Error submitting form.");
-                    }
-                };
-                xhr.send(JSON.stringify(formData));
+                const formData = new FormData();
+                formData.append('Email', email);
+                document.getElementById('progress').style.display = 'block'
+
+                fetch('https://script.google.com/macros/s/AKfycbyolTnjieCUouNNFynelsX5R-O8RTLw0LzEql372gtdKERIlZoCXNb10-6BEKRFQ8BN/exec', {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('progress').style.display = 'none'
+                    alert("Form submitted successfully - Thank You for being you :)")
+                })
+                .catch(error => {
+                    console.log(error)
+                    alert("An error occurred. Please try again")
+                    document.getElementById('progress').style.display = 'none'
+                });
             });
         </script>
 
-        <img src="img-home-1.png" alt="header" class="one"/>
+        <!-- <img src="img-home-1.png" alt="header" class="one"/> -->
     </div>
     
     <div class="container">
-        <h1>Automatically grade essays and track progress with just your phone! </h2>
-        <img src="img-2.png" alt="Performance ">
+        <h1>Automatically grade assignments and track progress </h2>
+        <img src="img-grade.png" alt="Performance ">
     </div>
+
+    <div class="container">
+        <h1>Schedule Events and Track Volunteers </h2>
+        <img src="img-calendar.png" alt="Performance ">
+    </div>
+
+    <div class="container">
+        <h1>Manage Co-op Membership and Streamline payments </h2>
+        <img src="img-payment.png" alt="Performance ">
+    </div>
+
     <footer>
         <img src="logo.png" class="logo"/>
         <h1> Homeschooling, made easy.</h1>
