@@ -1,5 +1,5 @@
 # Privacy Policy
-Effective Date: [Insert Date - e.g., April 7, 2025]
+Effective Date: April 7, 2025
 
 This Privacy Policy describes how YourNest ("we," "us," or "our") collects, uses, and handles your information when you visit our website yournest.app (the "Site") and sign up for our waitlist.
 
